@@ -1,0 +1,44 @@
+Oberlo API Mailbox Documentation 
+
+API Info : 
+Laravel : 5.6
+PHP : v7
+
+Requirements :
+1- PHP : v7 installed
+2- MySql / phpmyadmin
+3- composer installed
+
+How to use ?
+
+1- Unzip the file
+2- Open phpmyadmin in the server , Create Database named "Oberlo" (Or any other name)
+3- Open the Project Folder through any TextEditor/IDE
+4- In the Root Folder , Rename .env.example To .env ... (Remove .example)
+5- Open the .env file , adjust your DB Connection
+DB_DATABASE=("your DB name created in step 2")
+DB_USERNAME=("DB Username")
+DB_PASSWORD=("DB Password")
+
+6- Open the terminal , Run the Follwing Commands
+
+1- composer install
+2- php artisan migrate
+3- php artisan db:seed
+
+Congrats , Now your API is ready to use
+
+Feel free to use a browser or API Development Environment (Such as Postman)
+
+1 - /api/messages  => List all the messages
+2-  /api/messages/archived => List all archived messages 
+3-  /api/message/show  => Retrieve message by id, include read status and if message is achived 
+(Need id parameter such as /api/message/show?id=4 )
+4- /api/message/read => This action “reads” a message and marks it as read in database.
+(Need id parameter such as /api/message/read?id=4 )
+5- /api/message/archive => This action sets a message to archived
+(Need id parameter such as /api/message/archive?id=4 )
+
+
+
+For Any Doubts , Feel free to send me Email
